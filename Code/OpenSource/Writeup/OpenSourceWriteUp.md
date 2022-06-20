@@ -4,14 +4,16 @@ OpenSource is an EasyBox released by HackTheBox, and is hosted on the IP address
 ## Nmap Output
 We attempt to scan the IP address provided to get a better idea of the open ports. For this, we used the command `nmap -sC -sV 10.10.1.164` . Modifications were made for the screenshot due to the large output generated.
 
-![[nmap.png.png]]
+![](nmap.png.png)
 ## Gobuster Output
 We did not attempt to brute force the directory discovery process as we were able to get our hands on the source code for the box, and it turned out to not be a rabbit hole.
 ## Visiting the webpage
 When visiting the webpage hosted by the server, some of the interesting discoveries that we made were 
 1. the source code of upcloud, the webpage that we are currently visiting can be downloaded and run via Docker
 2. There exists a file upload functionality at `/upcloud` 
-![[Screenshot 2022-06-19 at 14.32.09.png]]
+
+![](1.png)
+
 ## Exploring the Source Code
 Aside from the links that can be reached via the webpage itself, the source code also uncovered a hidden link at `/uploads`.  
 ![[Screenshot 2022-06-19 at 14.37.00.png]]
